@@ -22,14 +22,14 @@ function StatReview() {
     },
     {
       user: {
-        firstName: "Anshul",
-        lastName: "Chaudhary",
+        firstName: "Radheshyam",
+        lastName: "Mishra",
         image: "user2.jpg"
       },
       rating: "4.5",
       review: "Very knowledgeable and supportive team",
       course: {
-        courseName: "CJ Tech"
+        courseName: "Parkwiz"
       }
     },
     {
