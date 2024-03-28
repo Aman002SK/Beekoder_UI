@@ -10,8 +10,8 @@ import LearningLanguageSection from '../components/core/HomePage/LearningLanguag
 import InstructorSection from '../components/core/HomePage/InstructorSection'
 import Footer from '../components/common/Footer'
 import ExploreMore from '../components/core/HomePage/ExploreMore'
-import ReviewSlider from '../components/common/ReviewSlider'
-import Course_Slider from '../components/core/Catalog/Course_Slider'
+// import ReviewSlider from '../components/common/ReviewSlider'
+// import Course_Slider from '../components/core/Catalog/Course_Slider'
 
 import { getCatalogPageData } from '../services/operations/pageAndComponentData'
 
@@ -22,7 +22,7 @@ import { motion } from 'framer-motion'
 import { fadeIn, } from './../components/common/motionFrameVarients';
 
 // background random images
-import backgroundImg1 from '../assets/Images/random bg img/logo1.png'
+import backgroundImg1 from '../assets/Images/random bg img/f-02.jpg'
 // import backgroundImg2 from '../assets/Images/random bg img/code-bg2.webp'
 
 import ContactFormSection from '../components/core/AboutPage/ContactFormSection';
@@ -91,7 +91,7 @@ const Home = () => {
         <React.Fragment>
             {/* background random image */}
             <div>
-                <div className="w-full h-[450px] md:h-[650px] lg:h-[730px] absolute top-0 left-0 opacity-[0.3] overflow-hidden object-cover ">
+                <div className="w-full h-[680px] md:h-[730px] lg:h-[995px]  absolute top-10  left-0 opacity-[0.3] overflow-hidden object-cover ">
                     <img src={backgroundImg} alt="Background"
                         className="w-full h-full object-cover "
                     />
@@ -123,7 +123,7 @@ const Home = () => {
                         viewport={{ once: false, amount: 0.1 }}
                         className='text-center text-3xl lg:text-4xl font-semibold mt-7  '
                     >
-                        Creating Excellence in Digital in a
+                        Creating Excellence in Digital the
                         <HighlightText text={" Beekoder Way"} />
                     </motion.div>
 
@@ -239,16 +239,16 @@ const Home = () => {
                    
                 {/*Section 2  */}
                 <div className='bg-richblack-900 text-richblack-100 '>
-                    <div className='homepage_ h-[310px]'>
+                    {/* <div className='homepage_ h-[310px]'>
                         <div className='w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-5 mx-auto'>
                             <div className='h-[150px]'></div>
-                            <div className='flex flex-row gap-7 text-white mt-10'>
-                                <CTAButton active={true} linkto={"/"}>
+                            <div className='flex flex-row gap-7 text-white mt-10'> */}
+                                {/* <CTAButton active={true} linkto={"/"}>
                                     <div className='flex items-center gap-3 ' >
                                         Explore Full Catalog
                                         <FaArrowRight />
                                     </div>
-                                </CTAButton>
+                                </CTAButton> */}
                                 {/* <div className=''>
                         <CodeBlocks
                             position={"lg:flex-row"}
@@ -287,16 +287,16 @@ const Home = () => {
                                         Learn more
                                     </div>
                                 </CTAButton> */}
-                            </div>
+                            {/* </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className='mx-auto w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-7'>
-                        <div className='flex flex-col lg:flex-row gap-5 mb-40 mt-[50px]'>
-                            <div className='text-3xl lg:text-4xl font-semibold w-full lg:w-[48%] mt-[60px]'>
+                        <div className='flex flex-col lg:flex-row gap-5 mb-40 mt-[10]px lg:mt-[350px]'>
+                            <div className='text-3xl lg:text-4xl font-semibold w-full lg:w-[48%] mt-[50px]'>
                                 Transform Your
-                                <HighlightText text={" thought Into Reality"} />
-                                <div className='gap-5 mt-[40px] text-center' >
+                                <HighlightText text={" Thought Into Reality"} />
+                                <div className='gap-5 mt-[60px] text-center' >
                                 <CTAButton active={true} linkto={"/contact"}>
                                     <div>
                                         Learn more

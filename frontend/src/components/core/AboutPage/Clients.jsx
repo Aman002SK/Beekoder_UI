@@ -1,7 +1,7 @@
 
 
 const Stats = [
-  { count: "100", label: "Clients" },
+  { count: "100+", label: "Clients" },
   { count: "10+", label: "Developer" },
   { count: "10+", label: "Mentors" },
   { count: "20+", label: "Technologies" },

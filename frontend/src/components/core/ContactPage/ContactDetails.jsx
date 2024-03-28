@@ -2,6 +2,7 @@ import React from "react"
 import * as Icon1 from "react-icons/bi"
 import * as Icon3 from "react-icons/hi2"
 import * as Icon2 from "react-icons/io5"
+import HighlightText from "../HomePage/HighlightText"
 
 const contactDetails = [
   {
@@ -39,9 +40,10 @@ const ContactDetails = () => {
             <div className="flex flex-row items-center gap-3">
               <Icon size={25} />
 
-              <h1 className="text-lg font-semibold text-richblack-5">
+              {/* <h1 className="text-lg font-semibold text-richblack-5">
                 {ele?.heading}
-              </h1>
+              </h1> */}
+              <HighlightText text={ele?.heading} />
             </div>
 
             <p className="font-medium">{ele?.description}</p>

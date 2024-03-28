@@ -88,7 +88,7 @@ function LoginForm() {
 
       <button
         type="submit"
-        className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px] font-medium text-richblack-900"
+        className="mt-6 rounded-[8px] bg-gradient-to-r from-[#FF512F] to-[#F09819] px-[12px] p-1.5 font-medium text-richblack-900"
       >
         Sign In
       </button>
