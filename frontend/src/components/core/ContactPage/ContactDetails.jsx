@@ -9,7 +9,7 @@ const contactDetails = [
     icon: "HiChatBubbleLeftRight",
     heading: "Write us",
     // description: "We are here to help you.",
-    details: "info@beekoder.in",
+    details: "info@beekoder.com",
   },
   {
     icon: "BiWorld",

@@ -28,6 +28,7 @@ import EditCourse from './components/core/Dashboard/EditCourse/EditCourse';
 import Instructor from './components/core/Dashboard/Instructor';
 
 
+
 import Cart from "./components/core/Dashboard/Cart/Cart";
 import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses";
 import AddCourse from "./components/core/Dashboard/AddCourse/AddCourse";
@@ -37,7 +38,7 @@ import VideoDetails from './components/core/ViewCourse/VideoDetails';
 
 import { ACCOUNT_TYPE } from './utils/constants';
 
-import { HiArrowNarrowUp } from "react-icons/hi"
+import { FaWhatsapp } from "react-icons/fa";
 
 
 function App() {
@@ -57,7 +58,19 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
-
+// whatsapp
+const sendMessageViaWhatsApp = () => {
+  const phoneNumber = "9025795814"; // Example: "1234567890" for the US would be "11234567890" (1 is the US country code)
+    
+  // Example message
+  const message = "Hello😊BeeKoder, Thank you for awesome website Could you please provide me some more info.!";
+  // Encode the message for a URL
+  const urlEncodedText = encodeURIComponent(message);
+  // Construct the WhatsApp URL with the phone number
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${urlEncodedText}`;
+  // Open WhatsApp in a new tab
+  window.open(whatsappUrl, '_blank');
+};
 
   // Go upward arrow - show , unshow
   const [showArrow, setShowArrow] = useState(false)
@@ -85,11 +98,24 @@ function App() {
         className={`bg-yellow-25 hover:bg-yellow-50 hover:scale-110 p-3 text-lg text-black rounded-2xl fixed right-3 z-10 duration-500 ease-in-out ${showArrow ? 'bottom-6' : '-bottom-24'} `} >
         <HiArrowNarrowUp />
       </button> */}
+    
+    <button onClick={sendMessageViaWhatsApp}
+            className={`bg-gradient-to-r from-[#FF512F] to-[#F09819] hover:bg-yellow-600 hover:scale-110 p-3 text-lg text-black rounded-2xl fixed right-3 z-10 duration-500 ease-in-out ${showArrow ? 'bottom-6' : '-bottom-24'}`} >
+      <FaWhatsapp />
+      {/* You might want to change the icon to something more relevant to WhatsApp */}
+    </button>
+
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route
+  path="/lms"
+  element={<p style={{ textAlign: 'center', fontSize: '3.2rem', color: '#333', }}>We are working on it...</p>}
+/>
+
+
         
       
         <Route path="catalog/:catalogName" element={<Catalog />} />

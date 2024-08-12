@@ -22,7 +22,7 @@ import { motion } from 'framer-motion'
 import { fadeIn, } from './../components/common/motionFrameVarients';
 
 // background random images
-import backgroundImg1 from '../assets/Images/random bg img/f-02.jpg'
+import backgroundImg1 from '../assets/Images/logo-2-updated.jpg'
 // import backgroundImg2 from '../assets/Images/random bg img/code-bg2.webp'
 
 import ContactFormSection from '../components/core/AboutPage/ContactFormSection';
@@ -91,14 +91,23 @@ const Home = () => {
         <React.Fragment>
             {/* background random image */}
             <div>
-                <div className="w-full h-[680px] md:h-[730px] lg:h-[995px]  absolute top-10  left-0 opacity-[0.3] overflow-hidden object-cover ">
-                    <img src={backgroundImg} alt="Background"
-                        className="w-full h-full object-cover "
-                    />
+            <div 
+  className="w-full h-[680px] md:h-[730px] lg:h-[1021px] absolute top-10 sm:top-0 left-0 overflow-hidden"
+  style={{
+    backgroundImage: `url(${backgroundImg})`,
+    backgroundSize: 'cover', // or '100% 100%' to stretch, but 'cover' maintains aspect ratio
+    backgroundPosition: 'center', // centers the background image
+    opacity: 0.3,
+  }}
+>
+  <div className="absolute left-0 bottom-0 w-full h-[250px] opacity_layer_bg"></div>
+  {/* Example content that you might want to shift, not the image */}
+  <div className="absolute ..."> {/* Content here */} </div>
+</div>
 
-                    <div className="absolute left-0 bottom-0 w-full h-[250px] opacity_layer_bg "></div>
-                </div>
-            </div>
+
+</div>
+
 
             <div className=' '>
                 {/*Section1  */}
@@ -121,7 +130,7 @@ const Home = () => {
                         initial='hidden'
                         whileInView={'show'}
                         viewport={{ once: false, amount: 0.1 }}
-                        className='text-center text-3xl lg:text-4xl font-semibold mt-7  '
+                        className='text-center text-3xl lg:text-4xl font-semibold mt-8  '
                     >
                         Creating Excellence in Digital the
                         <HighlightText text={" Beekoder Way"} />
@@ -139,15 +148,13 @@ const Home = () => {
                     </motion.div>
 
 
-                    <div className='flex flex-row gap-7 mt-8'>
-                        <CTAButton active={true} linkto={"/contact"}>
-                            Learn More
-                        </CTAButton>
+                    <div className='flex flex-row gap-7 right-0 mr-8 mt-8'>
+  <CTAButton active={true} linkto={"/contact"}>
+    Learn More
+  </CTAButton>
+  {/* Additional button */}
+</div>
 
-                        {/* <CTAButton active={true} linkto={"/login"}>
-                            Book a Demo
-                        </CTAButton> */}
-                    </div>
                 </div>
 
                 {/* animated code */}
@@ -292,8 +299,8 @@ const Home = () => {
                     </div> */}
 
                     <div className='mx-auto w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-7'>
-                        <div className='flex flex-col lg:flex-row gap-5 mb-40 mt-[10]px lg:mt-[350px]'>
-                            <div className='text-3xl lg:text-4xl font-semibold w-full lg:w-[48%] mt-[50px]'>
+                        <div className='flex flex-col lg:flex-row gap-5  mb-40 mt-[10]px  lg:mt-[350px]'>
+                            <div className='text-3xl lg:text-4xl font-semibold w-full  lg:w-[48%] mt-[95px] '>
                                 Transform Your
                                 <HighlightText text={" Thought Into Reality"} />
                                 <div className='gap-5 mt-[60px] text-center' >

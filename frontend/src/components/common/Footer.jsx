@@ -6,7 +6,7 @@ import { ImGithub, ImLinkedin2 } from "react-icons/im";
 
 // Images
 
-import beekoderLogo from '../../assets/Images/random bg img/logo2.png'
+import beekoderLogo from '../../assets/Images/random bg img/f-02.jpg'
 
 // footer data
 const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];

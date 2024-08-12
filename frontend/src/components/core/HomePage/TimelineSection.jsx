@@ -1,9 +1,16 @@
 import React from 'react'
 
-import Logo1 from "../../../assets/TimeLineLogo/Logo1.svg"
-import Logo2 from "../../../assets/TimeLineLogo/Logo2.svg"
-import Logo3 from "../../../assets/TimeLineLogo/Logo3.svg"
-import Logo4 from "../../../assets/TimeLineLogo/Logo4.svg"
+// import Logo1 from "../../../assets/discussion-form.png"
+import Logo2 from "../../../assets/live-class.png"
+// import Logo3 from "../../../assets/TimeLineLogo/Logo3.svg"
+import Logo4 from "../../../assets/certification.png"
+import Logo5 from "../../../assets/Images/WEB APP.png"
+import Logo6 from "../../../assets/Images/MACHINE LEARNING.png"
+import Logo7 from "../../../assets/Images/DEVLOPS.png"
+import Logo1 from "../../../assets/Images/right-arrow.png"
+
+
+
 import timelineImage from '../../../assets/Images/TimelineImage.png'
 
 import Img from './../../common/Img';
@@ -13,48 +20,75 @@ import { fadeIn } from '../../common/motionFrameVarients';
 
 
 
-const timeline = [
+const timeline1 = [
     {
-        Logo: Logo1,
-        heading: "Leadership",
-        Description: "Fully committed to the success company",
+         Logo: Logo1,
+        // heading: "Leadership",
+        Description: "We provide corporate training services to IT companies to enhance employee growth and productivity acceleration/upskilling.",
     },
     {
-        Logo: Logo2,
-        heading: "Responsibility",
-        Description: "Students will always be our top priority",
+         Logo: Logo2,
+        // heading: "Responsibility",
+        Description: "Classroom training, and Online Training.",
     },
     {
-        Logo: Logo3,
-        heading: "Flexibility",
-        Description: "The ability to switch is an important skills",
+        Logo: Logo4,
+        // heading: "Flexibility",
+        Description: "Awards 'Certification'",
     },
 
     {
-        Logo: Logo4,
-        heading: "Solve the problem",
-        Description: "Code your way to a solution",
+        Logo: Logo5,
+        // heading: "Solve the problem",
+        Description: "problem-solving skills",
+    },
+];
+
+const timeline2 = [
+    {
+         Logo: Logo1,
+        // heading: "Leadership",
+        Description: " Beekoder offer the best Placement and IT training for all our courses which will help you step into MNCs and Top Corporates..",
+    },
+    {
+        Logo: Logo5,
+        // heading: "Responsibility",
+        Description: "Full Stack Development",
+    },
+    {
+        Logo: Logo6,
+        // heading: "Flexibility",
+        Description: "Machine Learning",
+    },
+
+    {
+        Logo: Logo7,
+        // heading: "Solve the problem",
+        Description: "DevOps",
     },
 ];
 
 const TimelineSection = () => {
     return (
         <div>
-            <div className='flex flex-col lg:flex-row gap-15 items-center'>
-
+            <div className='flex flex-col lg:flex-row gap-15 items-center justify-center lg:ml-32'>
+           
                 <motion.div
-                    variants={fadeIn('right', 0.1)}
+                    variants={fadeIn('right', 0.2)}
                     initial='hidden'
                     whileInView={'show'}
                     viewport={{ once: false, amount: 0.1 }}
                     className='w-full lg:w-[45%] flex flex-col gap-5'>
+                         <h1 className=' font-bold text-4xl mb-10'>Corporate Training</h1>
                     {
-                        timeline.map((element, index) => {
+                        timeline1.map((element, index) => {
                             return (
+                              
                                 <div className='flex flex-row gap-6' key={index}>
 
-                                    <div className='w-[50px] h-[50px] rounded-full bg-richblue-500 flex justify-center items-center'>
+                                    <div className='w-[50px] h-[50px]  bg-richblue-500 flex justify-center items-center'>
                                         <img src={element.Logo} />
+                                        
                                     </div>
 
                                     <div>
@@ -67,8 +101,34 @@ const TimelineSection = () => {
                         })
                     }
                 </motion.div>
-
                 <motion.div
+                    variants={fadeIn('right', 0.1)}
+                    initial='hidden'
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.1 }}
+                    className='w-full lg:w-[45%] flex flex-col gap-5'>
+                        <h1 className=' font-bold text-4xl mb-10'>Retail Training</h1>
+                    {
+                        timeline2.map((element, index) => {
+                            return (
+                                <div className='flex flex-row gap-6' key={index}>
+
+                                    <div className='w-[50px] h-[50px]  bg-richblue-500 flex justify-center items-center'>
+                                        <img src={element.Logo} />
+                                        
+                                    </div>
+
+                                    <div>
+                                        <h2 className='font-semibold text-[18px]'>{element.heading}</h2>
+                                        <p className='text-base'>{element.Description}</p>
+                                    </div>
+
+                                </div>
+                            )
+                        })
+                    }
+                </motion.div>
+                {/* <motion.div
                     variants={fadeIn('left', 0.1)}
                     initial='hidden'
                     whileInView={'show'}
@@ -94,7 +154,7 @@ const TimelineSection = () => {
 
                     </div>
 
-                </motion.div>
+                </motion.div> */}
             </div>
         </div>
     )

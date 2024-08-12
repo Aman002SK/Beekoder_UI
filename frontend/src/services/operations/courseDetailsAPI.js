@@ -7,7 +7,7 @@ import { courseEndpoints } from "../apis"
 
 const {
   COURSE_DETAILS_API,
-  COURSE_CATEGORIES_API,
+  // COURSE_CATEGORIES_API,
   GET_ALL_COURSE_API,
   CREATE_COURSE_API,
   EDIT_COURSE_API,
@@ -34,7 +34,7 @@ export const getAllCourses = async () => {
   try {
     const response = await apiConnector("GET", GET_ALL_COURSE_API)
     if (!response?.data?.success) {
-      throw new Error("Could Not Fetch Course Categories")
+      // throw new Error("Could Not Fetch Course Categories")
     }
     result = response?.data?.data
   } catch (error) {
@@ -75,10 +75,10 @@ export const fetchCourseCategories = async () => {
   let result = []
 
   try {
-    const response = await apiConnector("GET", COURSE_CATEGORIES_API)
+    // const response = await apiConnector("GET", COURSE_CATEGORIES_API)
     console.log("COURSE_CATEGORIES_API RESPONSE............", response)
     if (!response?.data?.success) {
-      throw new Error("Could Not Fetch Course Categories")
+      // throw new Error(" Categories")
     }
     result = response?.data?.data
   } catch (error) {

@@ -47,7 +47,7 @@ const About = () => {
               initial='hidden'
               whileInView={'show'}
               viewport={{ once: false, amount: 0.1 }}
-              className="mx-auto mt-3 text-center text-base font-medium text-richblack-300 lg:w-[95%]">
+              className="mx-auto mt-3 text-center text-base font-medium text-richblack-300 lg:w-[95%] z-3">
               Beekoder is at the forefront of driving innovation in Digital Solutions and Training. We're passionate about creating a brighter future by
               offering cutting-edge products, leveraging emerging technologies,
               and nurturing a vibrant learning community.

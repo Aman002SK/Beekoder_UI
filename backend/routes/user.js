@@ -56,7 +56,7 @@ router.post("/reset-password", resetPassword)
 
 // Route for sending message
 
-router.post('reach/contact',sendMsg)
+router.post('/reach/contact',sendMsg)
 
 
 module.exports = router

@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import { FaStar } from "react-icons/fa";
+import HighlightText from "../core/HomePage/HighlightText";
 
 function StatReview() {
   const reviews = [
@@ -96,7 +97,9 @@ function StatReview() {
                     className="h-9 w-9 rounded-full object-cover"
                   />
                   <div className="flex flex-col">
-                    <h1 className="font-semibold text-richblack-5 capitalize">{`${review.user.firstName} ${review.user.lastName}`}</h1>
+                    {/* <h1 className="font-semibold text-richblack-5 capitalize">{`${review.user.firstName} ${review.user.lastName}`}</h1> */}
+                    <HighlightText text={`${review?.user?.firstName} ${review?.user?.lastName}`} />
+
                     <h2 className="text-[12px] font-medium text-richblack-500">
                       {review.course.courseName}
                     </h2>

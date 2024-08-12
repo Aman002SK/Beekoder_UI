@@ -233,7 +233,7 @@ exports.login = async (req, res) => {
 
     catch (error) {
         console.log('Error while Login user');
-        console.log(error);
+        
         res.status(500).json({
             success: false,
             error: error.message,
@@ -337,52 +337,25 @@ exports.changePassword = async (req, res) => {
 
 exports.sendMsg = async (req, res) => {
     try {
+        // Fetch email and message body from req.body
+        const { email, message } = req.body;
 
-        // fetch email from re.body 
-        const { email } = req.body;
+        let title = "Enquiry";
 
-
-        // if exist then response
-        // if (checkUserPresent) {
-        //     console.log('(when otp generate) User alreay registered')
-        //     return res.status(401).json({
-        //         success: false,
-        //         message: 'User is Already Registered'
-        //     })
-        // }
-
-       
-
-        // console.log('Your otp - ', otp);
-
-        // const name = email.split('@')[0].split('.').map(part => part.replace(/\d+/g, '')).join(' ');
-        // console.log(name);
-
-        // send otp in mail
-        // await mailSender(email, 'OTP Verification Email', otpTemplate(otp, name));
-
-        // create an entry for otp in DB
-        // const otpBody = await OTP.create({ email, otp });
-        // console.log('otpBody - ', otpBody);
-        let title = " enquiry "
-         let data = await req.body.json();
-         console.log(data)
-         await mailSender(email, title, data);
-
-        // return response successfully
-        res.status(200).json({
+        // Assuming message is an HTML string
+        const mail = await mailSender(email, title, message);
+        // Return response successfully
+        return res.status(200).json({
             success: true,
-            data,
-            message: 'message sent successfully'
+            data: { email, message },
+            message: 'Message sent successfully'
         });
-    }
-
-    catch (error) {
-        console.log('Error while generating Otp - ', error);
-        res.status(200).json({
+    } catch (error) {
+        console.log('Error while sending message - ', error);
+        res.status(500).json({
             success: false,
             message: 'Error while sending message',
-            error: error.mesage
+            error: error.message
         });
     }
 }

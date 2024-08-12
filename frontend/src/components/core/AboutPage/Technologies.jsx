@@ -1,18 +1,17 @@
 
 import HighlightText from "../../../components/core/HomePage/HighlightText";
-import CTAButton from "../../../components/core/HomePage/Button";
-import img1 from "../../../assets/Images/random bg img/web-development-logo.png";
-import img2 from "../../../assets/Images/random bg img/mobile-app-dev.png";
-import img3 from "../../../assets/Images/random bg img/ux-ui-logo.png";
-import img4 from "../../../assets/Images/random bg img/cybersecurity-logo.png";
-import img5 from "../../../assets/Images/random bg img/machine-learning.png";
+// import CTAButton from "../../../components/core/HomePage/Button";
+import img1 from "../../../assets/Images/WEB APP.png";
+import img2 from "../../../assets/Images/MOBILE APP.png";
+import img3 from "../../../assets/Images/UI UX.png";
+import img4 from "../../../assets/Images/CYBER SEC.png";
+import img5 from "../../../assets/Images/MACHINE LEARNING.png";
 
-import img6 from "../../../assets/Images/random bg img/devops-logo.png";
+import img6 from "../../../assets/Images/DEVLOPS.png";
 
 const TechnologiesGrid = [
   {
     order: -1,
-    
     heading: "What is our ",
     highlightText: "expertise",
     description:
@@ -31,7 +30,7 @@ const TechnologiesGrid = [
 
   {
     order: 2,
-    heading: "Mobile App Design",
+    heading: "Mobile App Development",
     img:img2,
    
     description:
@@ -55,7 +54,7 @@ const TechnologiesGrid = [
   },
   {
     order: 4,
-    heading: `Machine Learning`,
+    heading: "Machine Learning",
     img:img5,
     description:
     "Leverage data effectively with our Machine Learning solutions. Our experts extract insights and build models tailored to your needs, driving innovation and competitive advantage for your business.",
@@ -63,7 +62,7 @@ const TechnologiesGrid = [
   
   {
     order: 5,
-    heading: "Devops",
+    heading: "DevOps",
     img: img6,
     description:
     "Optimize your development and operations with our DevOps solutions. We automate processes, enhance collaboration, and ensure faster software delivery.",
@@ -73,55 +72,87 @@ const TechnologiesGrid = [
 const TechGrid = () => {
 
   return (
+    // <div className="grid mx-auto w-[350px] lg:w-fit grid-cols-1 lg:grid-cols-4 mb-60">
+    //   {TechnologiesGrid.map((card, i) => {
+    //     return (
+    //       <div
+    //         key={i}
+    //         className={`${i === 0 && "lg:col-span-2 lg:h-[294px]"}  ${card.order % 2 === 1
+    //             ? "bg-richblack-700 h-[294px]"
+    //             : card.order % 2 === 0
+    //               ? "bg-richblack-800 h-[294px]"
+    //               : "bg-transparent"
+    //           } ${card.order === 3 && "lg:col-start-2"}  `}
+              
+    //       >
+    //         {card.order < 0 ? (
+    //           <div className="lg:w-[90%] flex flex-col gap-3 pb-10 lg:pb-0">
+    //             <div className="text-4xl text-richblack-400 font-semibold ">
+    //               {card.heading}
+    //               <HighlightText text={card.highlightText} />
+    //             </div>
+    //             <p className="text-richblack-300 font-medium " >
+    //               {card.description}
+    //             </p>
+
+    //             <div className="w-fit mt-2">
+    //               {/* <CTAButton active={true} linkto={card.BtnLink}>
+    //                 {card.BtnText}
+    //               </CTAButton> */}
+    //             </div>
+    //           </div>
+    //         ) : (
+    //           <div className="p-8 flex flex-col gap-8" >
+    //             {/* <h1 className="text-gradient">{card.heading}</h1> */}
+    //             <HighlightText text={card.heading}></HighlightText>
+    //             <img src={card.img} alt={card.heading} className="w-full h-auto" />
+
+    //             <p className="text-gradient from-[#da310f] to-[#d99638] font-medium"  >
+    //               {card.description}
+    //             </p>
+    //           </div>
+    //         )}
+    //       </div>
+    //     );
+    //   })}
+    // </div>
+
     <div className="grid mx-auto w-[350px] lg:w-fit grid-cols-1 lg:grid-cols-4 mb-60">
-      {TechnologiesGrid.map((card, i) => {
-        return (
-          <div
-            key={i}
-            className={`${i === 0 && "lg:col-span-2 lg:h-[294px]"}  ${card.order % 2 === 1
-                ? "bg-richblack-700 h-[294px]"
-                : card.order % 2 === 0
-                  ? "bg-richblack-800 h-[294px]"
-                  : "bg-transparent"
-              } ${card.order === 3 && "lg:col-start-2"}  `}
-          >
-            {card.order < 0 ? (
-              <div className="lg:w-[90%] flex flex-col gap-3 pb-10 lg:pb-0">
-                <div className="text-4xl text-richblack-400 font-semibold ">
-                  {card.heading}
-                  <HighlightText text={card.highlightText} />
-                </div>
-                <p className="text-richblack-300 font-medium " >
-                  {card.description}
-                </p>
+    {TechnologiesGrid.map((card, i) => {
+      return (
+        <div
+  key={i}
+  className={`${i === 0 && "lg:col-span-2 lg:h-[294px]"} ${
+    card.order % 2 === 1 ? "bg-richblack-700 h-[294px]" : card.order % 2 === 0 ? "bg-richblack-800 h-[294px] hover:bg-richblack-600" : "bg-transparent"
+  } ${card.order === 3 && "lg:col-start-2"} p-8 flex flex-col gap-8  hover:shadow-lg transition-all duration-300`}
+>
 
-                <div className="w-fit mt-2">
-                  {/* <CTAButton active={true} linkto={card.BtnLink}>
-                    {card.BtnText}
-                  </CTAButton> */}
-                </div>
+          {card.order < 0 ? (
+            <div className="flex flex-col gap-3 pb-10 lg:pb-0">
+              <div className="text-4xl text-richblack-400 font-semibold">
+                {card.heading}
+                <HighlightText text={card.highlightText} />
               </div>
-            ) : (
-              <div className="p-8 flex flex-col gap-8" style={{
-                backgroundImage: `url(${card.img})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                padding: '20px', // Adjust as necessary
-              }}>
-                {/* <h1 className="text-gradient">{card.heading}</h1> */}
-                <HighlightText text={card.heading}></HighlightText>
-               
+              <p className="text-richblack-300 font-medium">{card.description}</p>
+            </div>
+          ) : (
+            <div className="flex flex-col gap-4">
+              {/* Icon and Heading Container */}
+              <div className="flex items-center gap-3">
+                <img src={card.img} alt={card.heading} className="w-20 h-20 opacity-75" /> {/* Adjust size as needed */}
+                <div style={{ fontSize: '24px' }}> {/* Custom font size */}
+  <HighlightText text={card.heading}></HighlightText>
+</div>
+              </div>
+              <p className="text-gradient from-[#da310f] to-[#d99638] font-medium">{card.description}</p>
+            </div>
+          )}
+        </div>
+      );
+    })}
+  </div>
+  
 
-                <p className="text-gradient from-[#da310f] to-[#d99638] font-medium"  >
-                  {card.description}
-                </p>
-              </div>
-            )}
-          </div>
-        );
-      })}
-    </div>
   );
 };
 

@@ -30,10 +30,9 @@ const Navbar = () => {
     const fetchSublinks = async () => {
         try {
            let val =[
-            { name: "IT" },
+            
             { name: "Training" },
-            { name: "IT Staffing" },
-            {name:"LMS Launching Soon"}
+            { name: "IT Staffing" }
             // Other subcategories...
         ];
             setLoading(true)
@@ -94,12 +93,12 @@ const Navbar = () => {
 
 
     return (
-        <nav className={`z-[10] flex h-14 w-full items-center justify-center border-b-[1px] border-yellow-500 text-white translate-y-0 transition-all ${showNavbar} `}>
+        <nav className={`z-[10] flex h-14 w-full  items-center justify-center border-b-[1px] border-yellow-500 text-white translate-y-0 transition-all ${showNavbar} `}>
              {/* <nav className={` fixed flex items-center justify-center w-full h-16 z-[10] translate-y-0 transition-all text-white ${showNavbar}`}> */}
             <div className='flex w-11/12 max-w-maxContent items-center justify-between '>
                 {/* logo */}
                 <Link to="/">
-                    <img src={beekoderLogo} width={115} height={115} loading='lazy'  />
+                    <img src={beekoderLogo} width={150} height={150} loading='lazy'  />
                 </Link>
 
                 {/* Nav Links - visible for only large devices*/}
@@ -108,10 +107,10 @@ const Navbar = () => {
                         NavbarLinks.map((link, index) => (
                             <li key={index}>
                                 {
-                                    link.title === "Services" ? (
+                                    link.title === "More Services" ? (
                                         <div
                                             className={`group relative flex cursor-pointer items-center gap-1 ${matchRoute("/catalog/:catalogName")
-                                                ? "bg-yellow-25 text-black rounded-xl p-1 px-3"
+                                                ? "bg-gradient-to-r from-[#FF512F] to-[#F09819] text-black rounded-xl p-1 px-3"
                                                 : "text-richblack-25 rounded-xl p-1 px-3"
                                                 }`}
                                         >
@@ -152,10 +151,11 @@ const Navbar = () => {
                                         </Link>)
                                 }
                             </li>
+                        
                         ))}
                 </ul>
 
-
+               
 
 
                 {/* Login/SignUp/Dashboard */}
@@ -176,11 +176,11 @@ const Navbar = () => {
                         token === null && (
                             <Link to="/login">
                                 {/* <button className='border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 rounded-md focus:outline-8 outline-yellow-50'> */}
-                                <button className={` px-[12px] py-[8px] text-richblack-100 rounded-md 
+                                {/* <button className={` px-[12px] py-[8px] text-richblack-100 rounded-md 
                                  ${matchRoute('/login') ? 'border-[2.5px] border-yellow-50' : 'border border-yellow-500 bg-richblack-800'} `}
                                 >
                                     Log in
-                                </button>
+                                </button> */}
                             </Link>
                         )
                     }
@@ -188,11 +188,11 @@ const Navbar = () => {
                         token === null && (
                             <Link to="/signup">
                                 {/* <button className='border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 rounded-md'> */}
-                                <button className={` px-[12px] py-[8px] text-richblack-100 rounded-md 
+                                {/* <button className={` px-[12px] py-[8px] text-richblack-100 rounded-md 
                                  ${matchRoute('/signup') ? 'border-[2.5px] border-yellow-50' : 'border border-yellow-500 bg-richblack-800'} `}
                                 >
                                     Sign Up
-                                </button>
+                                </button> */}
                             </Link>
                         )
                     }
